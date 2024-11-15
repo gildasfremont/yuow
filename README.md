@@ -1,24 +1,5 @@
-# README
+# Yuow - Universal Payment Links
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Yuow permet de générer des liens de paiement universels sans création de compte. Configurez une seule fois vos méthodes de paiement préférées et générez des liens en un clic.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Configuration Locale 
