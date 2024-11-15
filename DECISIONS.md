@@ -1,11 +1,11 @@
 # Décisions Architecturales
 
-## 2024-03-21 - Structure Initiale
-- Application Progressive Web App avec Rails et Tailwind
-- Stockage local des informations de l'émetteur
-- Architecture modulaire pour les méthodes de paiement
-- Interface minimaliste et responsive
-- Déploiement via Render.com
+## 2024-03-21 - Configuration Initiale
+- Mise en place Rails 7 avec:
+  - Tailwind CSS pour le styling
+  - esbuild pour la compilation JavaScript
+  - Configuration PWA de base
+  - Structure minimale pour démarrage rapide
 
 ### Fonctionnalités Clés
 1. Génération de liens de paiement sans compte
