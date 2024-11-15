@@ -5,11 +5,11 @@
 ### Configuration
 - `tailwind.config.js` - Configuration Tailwind avec thème personnalisé
 - `config/routes.rb` - Routes de l'application
-- `app/assets/config/manifest.json` - Manifeste PWA
+- `public/manifest.json` - Manifeste PWA
 
 ### Vues
 - `app/views/layouts/application.html.erb` - Layout principal
-- `app/views/shared/_header.erb` - En-tête partagé
+- `app/views/shared/_header.html.erb` - En-tête partagé
 - `app/views/home/index.html.erb` - Page d'accueil avec générateur
 
 ### JavaScript
