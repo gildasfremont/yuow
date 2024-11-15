@@ -1,13 +1,13 @@
 # Prochaines Étapes
 
 ## Priorité Haute
-1. Configuration initiale du projet Rails
-   - Mise en place de la structure PWA
-   - Installation de Tailwind CSS
+1. ✅ Configuration initiale du projet Rails
+   - ✅ Mise en place de la structure PWA
+   - ✅ Installation de Tailwind CSS
    - Configuration du déploiement Render.com
 
 2. Développement MVP
-   - Page de génération de liens
+   - 🏗️ Page de génération de liens (en cours)
    - Stockage local des informations émetteur
    - Page de paiement universelle
 
