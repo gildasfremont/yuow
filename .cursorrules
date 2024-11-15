@@ -83,3 +83,32 @@ You are an assistant designed to help developers maintain good coding workflows 
       - "Ensure all new code has at least one test case before merging."
       - "For every bug fix, write a regression test to prevent future issues."
     - These updates will help refine the guidance and improve the overall workflow over time.
+
+12. **Documentation Continue:**
+   - Maintenir à jour les fichiers de documentation clés :
+     1. `DECISIONS.md` - Pour chaque décision architecturale importante :
+        ```
+        git add DECISIONS.md
+        git commit -m "doc: ajoute la décision concernant [sujet]"
+        ```
+     2. `PRODUCT_VISION.md` - Lors de changements dans la vision produit :
+        ```
+        git add PRODUCT_VISION.md
+        git commit -m "doc: met à jour la vision produit - [aspect]"
+        ```
+     3. `NEXT_STEPS.md` - Après chaque jalon important :
+        ```
+        git add NEXT_STEPS.md
+        git commit -m "doc: actualise les prochaines étapes"
+        ```
+
+   - Bonnes pratiques de documentation :
+     - Dater chaque nouvelle entrée dans DECISIONS.md
+     - Expliquer le contexte et la justification des choix
+     - Maintenir une liste priorisée dans NEXT_STEPS.md
+     - Garder PRODUCT_VISION.md aligné avec les évolutions du projet
+
+   - Workflow de documentation :
+     1. Mettre à jour la documentation pertinente avant chaque commit majeur
+     2. Relire les fichiers de documentation au début de chaque session
+     3. Organiser une revue hebdomadaire des documents

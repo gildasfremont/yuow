@@ -1,33 +1,33 @@
-# Prochaines étapes de développement
+# Prochaines Étapes
 
-## 1. Installation des dépendances
-Ajouter au Gemfile :
-- serviceworker-rails
-- view_component
-- stimulus-rails
-- rqrcode
-- rspec-rails (group: development, test)
-- factory_bot_rails (group: development, test)
+## Priorité Haute
+1. Configuration initiale du projet Rails
+   - Mise en place de la structure PWA
+   - Installation de Tailwind CSS
+   - Configuration du déploiement Render.com
 
-Commandes à exécuter :
-- bundle install
-- rails generate rspec:install
+2. Développement MVP
+   - Page de génération de liens
+   - Stockage local des informations émetteur
+   - Page de paiement universelle
 
-## 2. Structure PWA
-- Configurer le service worker
-- Ajouter le manifest.json
-- Configurer le stockage local
+3. Intégration des méthodes de paiement
+   - Module de virement bancaire avec QR code
+   - Deep links vers les applications mobiles
+   - Système de copier-coller RIB
 
-## 3. Pages principales
-- Générer le contrôleur Home
-- Créer la vue principale avec le formulaire
-- Implémenter le système de stockage local pour les configurations
+## Priorité Moyenne
+1. Optimisation UX/UI
+   - Design responsive
+   - Animations fluides
+   - Tests utilisateurs
 
-## 4. Premier module de paiement
-- Créer le module de virement bancaire
-- Implémenter la génération de QR code
-- Ajouter les deep links
+2. Fonctionnalités additionnelles
+   - Détection automatique langue/pays
+   - Historique des liens générés
+   - Système d'invitation viral
 
-## 5. Tests
-- Configurer RSpec
-- Écrire les premiers tests unitaires  
+## À Considérer Plus Tard
+1. Analytics et métriques d'utilisation
+2. Internationalisation complète
+3. API pour intégrations futures  
