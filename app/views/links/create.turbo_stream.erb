@@ -1,0 +1,14 @@
+<%= turbo_stream.prepend "links-list" do %>
+  <div class="flex items-center justify-between rounded-lg border p-3">
+    <div class="space-y-1">
+      <p class="text-sm font-medium leading-none"><%= @link[:amount] %>€</p>
+      <p class="text-sm text-muted-foreground">
+        <%= l(@link[:created_at], format: :short) %>
+      </p>
+    </div>
+    <a href="/pay/<%= @link[:id] %>" 
+       class="inline-flex items-center justify-center rounded-md text-sm font-medium text-primary h-8 px-3 hover:bg-primary/10">
+      Voir
+    </a>
+  </div>
+<% end %> 

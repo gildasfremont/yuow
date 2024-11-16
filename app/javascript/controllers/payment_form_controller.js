@@ -1,9 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
+// Connects to data-controller="payment-form"
 export default class extends Controller {
   connect() {
-    console.log("Payment form controller connected")
   }
-
-  // À implémenter : génération du lien et stockage local
-} 
+}

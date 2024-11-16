@@ -9,6 +9,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'yuow': {
+          50: '#f8fafc',
+          100: '#f1f5f9',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
+        }
+      },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
@@ -16,7 +25,5 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/container-queries'),
-  ]
+  ],
 }

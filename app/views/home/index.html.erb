@@ -1,28 +1,44 @@
-<div class="bg-white rounded-lg shadow px-5 py-6 sm:px-6">
-  <div class="max-w-lg mx-auto">
-    <h1 class="text-3xl font-bold text-gray-900 text-center mb-8">
-      Générer un lien de paiement
-    </h1>
-    
-    <div class="space-y-6">
-      <%= form_with url: '#', class: "space-y-4", data: { controller: "payment-form" } do |f| %>
-        <div>
-          <%= f.label :amount, "Montant", class: "block text-sm font-medium text-gray-700" %>
-          <div class="mt-1 relative rounded-md shadow-sm">
-            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <span class="text-gray-500 sm:text-sm">€</span>
-            </div>
-            <%= f.number_field :amount, 
-                class: "focus:ring-yuow-500 focus:border-yuow-500 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md",
-                placeholder: "0.00",
-                step: "0.01",
-                min: "0" %>
-          </div>
+<div class="flex min-h-[600px] flex-col">
+  <div class="flex-1">
+    <div class="container flex flex-col items-center justify-center space-y-8 py-8">
+      <div class="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
+        <div class="flex flex-col space-y-2 text-center">
+          <h1 class="text-2xl font-semibold tracking-tight">
+            Générer un lien de paiement
+          </h1>
+          <p class="text-sm text-muted-foreground">
+            Entrez un montant pour créer un lien de paiement universel
+          </p>
         </div>
 
-        <%= f.submit "Générer le lien", 
-            class: "w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-yuow-600 hover:bg-yuow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yuow-500" %>
-      <% end %>
+        <%= form_with(url: links_path, class: "space-y-4", data: { turbo: true }) do |f| %>
+          <div class="space-y-2">
+            <%= f.label :amount, "Montant", class: "text-sm font-medium leading-none" %>
+            
+            <div class="relative">
+              <div class="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+                <span class="text-sm text-muted-foreground">€</span>
+              </div>
+              <%= f.number_field :amount,
+                  required: true,
+                  min: "0.01",
+                  step: "0.01",
+                  class: "flex h-9 w-full rounded-md border border-input bg-transparent pl-7 pr-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50",
+                  placeholder: "0.00" %>
+            </div>
+          </div>
+
+          <%= f.submit "Générer le lien",
+              class: "inline-flex w-full items-center justify-center rounded-md bg-primary px-8 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50" %>
+        <% end %>
+
+        <div class="w-full space-y-4 mt-8">
+          <div class="text-sm font-medium text-muted-foreground">Liens générés</div>
+          <div id="links-list" class="space-y-2">
+            <!-- Les liens seront ajoutés ici -->
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
