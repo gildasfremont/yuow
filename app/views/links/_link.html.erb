@@ -5,8 +5,8 @@
       <%= l(link[:created_at], format: :short) %>
     </p>
   </div>
-  <div class="flex items-center gap-2">
-    <button onclick="copyToClipboard(this, '/pay/<%= link[:id] %>')"
+  <div class="flex items-center gap-2" data-controller="clipboard" data-clipboard-path="/pay/<%= link[:id] %>">
+    <button onclick="copyLink(this, '/pay/<%= link[:id] %>')"
             class="inline-flex items-center justify-center rounded-md text-sm font-medium text-primary h-8 px-3 hover:bg-primary/10 transition-colors"
             title="Copier le lien">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
